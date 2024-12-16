@@ -5,7 +5,7 @@ PKG nginx
 CP usr /
 
 # configure
-CMD sed -i '' 's%server_name  localhost%server_name  @${JAIL_IP}%g' /usr/local/etc/nginx/vhosts/defaults.conf
+CMD sed -i '' 's%server_name  localhost;%server_name  @${JAIL_IP};%g' /usr/local/etc/nginx/vhosts/defaults.conf
 
 # enable and start
 SYSRC nginx_enable=YES
