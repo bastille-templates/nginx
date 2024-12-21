@@ -2,11 +2,10 @@
 PKG nginx
 
 # copy files
-CP usr /
+CP root /
+#CP usr /
 
 # configure
-CMD openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /usr/local/etc/nginx/server.key -out /usr/local/etc/nginx/server.crt -subj "/C=ID/ST=Bangka Belitung/L=Pangkalpinang/O=localhost/CN=localhost/emailAddress=admin@localhost"
-CMD chmod 640 /usr/local/etc/nginx/server.*
 
 # enable and start
 SYSRC nginx_enable=YES
