@@ -2,8 +2,7 @@
 PKG nginx
 
 # copy files
-CP root /
-#CP usr /
+CP usr /
 
 # configure
 
